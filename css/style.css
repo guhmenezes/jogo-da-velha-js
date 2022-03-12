@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body{
+  background-color: black;
+}
+
+h2{
+  display: inline-block;
+  padding: 0 60px;
+  margin-top: 20px;
+}
+
+span{
+  font-family: sans-serif;
+}
+
+.p1{
+  color:blue;
+}
+
+.p2{
+  color: red;
+}
+
+.jogadores{
+  height: 80px;
+}
+
+.container{
+  background-color: white;
+  width: 500px;
+  margin: 2rem auto;
+  height: 600px;
+  padding-top: 15px;
+  position: relative;
+}
+
+.tabuleiro{
+  width: 400px;
+  height: 400px;
+  margin: 2rem auto;
+  box-shadow: 0 0 0.5rem black;
+  padding-top: 1px;
+  padding-left: 1px;
+}
+
+td{
+  width: 130px;
+  height: 130px;
+  border: #909090 solid 2px;
+  font-size: 48pt;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+td:hover{
+  background-color: rgba(0,0,0,.2);
+  transition: 0.5s;
+}
+
+.winner, .playAgain{
+  width: 100%;
+  height: 90px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 51px auto;
+  padding: 0 55px;
+  /* box-shadow: 2px 2px 5px black; */
+}
+
+.winner button{
+  background-color: #909090;
+  color: #101010;
+  margin-top: 10px;
+  border: none;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.playAgain button{
+  background-color: #909090;
+  color: #101010;
+  margin-top: 10px;
+  border: none;
+  width: 70px;
+  font-weight: bold;
+  height: 30px;
+  margin: 30px 30px;
+  border-radius: 10px;
+}
+
+.escurecer{
+  background-color: rgba(0,0,0,.2);
+}
+
+.escurecerp1{
+  background-color: rgba(0,0,0,.2);
+  box-shadow: 0 0 0.5rem blue;
+}
+
+.escurecerp2{
+  background-color: rgba(0,0,0,.2);
+  box-shadow: 0 0 0.5rem red;
+}
