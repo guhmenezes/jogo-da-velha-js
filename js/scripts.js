@@ -1,11 +1,30 @@
-let player1 = prompt
-('Quer jogar uma partidinha de jogo da véia com seu amigo?\nVocê será o X ou O ?')
-.toUpperCase()
+var player1 = prompt
+('Quer jogar uma partida de jogo da velha ?\nPlayer 1 será X ou O ?')
 let player2
-let playerWinner;
+let playerWinner
 
-if (player1 === null || player1 === '' || player1 !== 'X') player1 = 'O'
-player1 === 'X' ? (player2 = 'O') : (player2 = 'X')
+
+if (player1 === null || player1 === '') player1 = 'default'
+else player1 = player1.toUpperCase()
+
+switch(player1){
+  case 'O':
+    player2 = 'X'
+    break
+  case 'X':
+    player2 = 'O' 
+    break
+  case 'default':
+    alert('   Por predefinição\n>> Player 1 será O <<\n>> Player 2 será X <<')
+    player1 = 'O'
+    player2 = 'X'
+    break
+  default:
+    alert('   Por predefinição\n>> Player 1 será O <<\n>> Player 2 será X <<')
+    player1 = 'O'
+    player2 = 'X'
+}
+
 document.querySelector('.p1').innerHTML = player1
 document.querySelector('.p2').innerHTML = player2
 
@@ -28,7 +47,7 @@ for (let i = 0; i < 9; i++) {
   })
 }
 
-function winner(eventos){
+function winner(){
   const winner = document.querySelector('.winner')
 
   if (td[0].innerHTML === player1 && td[1].innerHTML === player1 && td[2].innerHTML === player1 
@@ -41,8 +60,9 @@ function winner(eventos){
     || td[2].innerHTML === player1 && td[4].innerHTML === player1 && td[6].innerHTML === player1){
     playerWinner = 'Player 1 Venceu' 
     document.querySelector('.tabuleiro').classList.add('escurecerp1')
+    winner.querySelector('h2').innerText = playerWinner
+    document.querySelector('.jogadores').style.display = 'none'
     winner.style.display = ''
-    winner.innerHTML = `<h2>${playerWinner}</h2><button>Jogar de novo ?</button>`
     playAgain()
 
   } else if (td[0].innerHTML === player2 && td[1].innerHTML === player2 && td[2].innerHTML === player2 
@@ -55,16 +75,18 @@ function winner(eventos){
     || td[2].innerHTML === player2 && td[4].innerHTML === player2 && td[6].innerHTML === player2){
       playerWinner = 'Player 2 Venceu'
       document.querySelector('.tabuleiro').classList.add('escurecerp2')
+      winner.querySelector('h2').innerText = playerWinner
+      document.querySelector('.jogadores').style.display = 'none'
       winner.style.display = ''
-      winner.innerHTML = `<h2>${playerWinner}</h2><button>Jogar de novo ?</button>`
       playAgain()
 
     } else if(td[0].innerHTML !== '' && td[1].innerHTML !== '' && td[2].innerHTML !== '' 
     && td[3].innerHTML !== '' && td[4].innerHTML !== '' && td[5].innerHTML !== ''
     && td[6].innerHTML !== '' && td[7].innerHTML !== '' && td[8].innerHTML !== '' && !playerWinner){
     document.querySelector('.tabuleiro').classList.add('escurecer')
+    winner.querySelector('h2').innerText = 'Xii, deu véia'
+    document.querySelector('.jogadores').style.display = 'none'
     winner.style.display = ''
-    winner.innerHTML = `<h2>Xii, deu véia</h2><button>Jogar de novo ?</button>`
     playAgain()
     }
     
