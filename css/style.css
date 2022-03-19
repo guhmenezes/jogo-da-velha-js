@@ -120,6 +120,31 @@ footer{
   top: 38.5rem;
 }
 
+/* .modal{
+  background-color: rgba(0,0,0,.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game-settings{
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 0.5rem black;
+  margin-top: 7%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+} */
+
+
 @media (min-width: 330px) and (max-width: 500px) {
 
   .container{
