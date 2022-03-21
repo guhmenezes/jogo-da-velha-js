@@ -47,29 +47,29 @@ for (let i = 0; i < 9; i++) {
   })
 }
 
-// function easy(){
-//   for (let i = 0; i < 9; i++) {
-//   td[i].addEventListener('click', function (evento) {
-//     if (evento.target.innerHTML === '' && !playerWinner) {
-//       count++
-//       if (count % 2 !== 0) {
-//         td[i].classList.add('p1')
-//         td[i].innerHTML = player1
-//         setTimeout(clickCom(
-//           td[Math.floor(Math.random() *10)]
-//         ), 5000)        
-//       } 
-//       winner();
-//     }
-//   })
-// }
-// }
+function easy(){
+  for (let i = 0; i < 9; i++) {
+  td[i].addEventListener('click', function (evento) {
+    if (evento.target.innerHTML === '' && !playerWinner) {
+      count++
+      if (count % 2 !== 0) {
+        td[i].classList.add('p1')
+        td[i].innerHTML = player1
+        setTimeout(clickCom(
+          td[Math.floor(Math.random() *10)]
+        ), 5000)        
+      } 
+      winner();
+    }
+  })
+}
+}
 
-// function clickCom(campo){
-//   campo.classList.add('p2')
-//   campo.innerHTML = player2
-//   count ++
-// }
+function clickCom(campo){
+  campo.classList.add('p2')
+  campo.innerHTML = player2
+  count ++
+}
 
 // easy()
 
